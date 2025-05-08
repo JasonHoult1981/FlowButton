@@ -9,12 +9,17 @@
         <target>lightning__HomePage</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__RecordPage">
+        <targetConfig targets="lightning__RecordPage, lightning__AppPage, lightning__HomePage">
             <property name="flowToLaunch" type="String" label="Flow API Name"/>
             <property name="recordId" type="String" label="Record ID"/>
-            <property name="buttonLabel" type="String" label="Button Label"/>
-            <property name="launchFlowOnInit" type="Boolean" label="Launch on Init"/>
-            <property name="showFlowInModal" type="Boolean" label="Show Flow in Modal"/>
+            <property name="buttonLabel" type="String" label="Button Label" default="Create Contact"/>
+            <property name="variant" type="String" label="Button Variant (brand, neutral, etc.)" default="brand"/>
+            <property name="cssClass" type="String" label="Container CSS Class" default="slds-size_12-of-12"/>
+            <property name="padding" type="String" label="Container Padding (CSS)" default="10px 10px 10px 10px"/>
+            <property name="horizontalAlign" type="String" label="Button Alignment (center, space, end)" default=""/>
+            <property name="buttonClass" type="String" label="Button CSS Class" default=""/>
+            <property name="launchFlowOnInit" type="Boolean" label="Launch Flow On Init" default="false"/>
+            <property name="showFlowInModal" type="Boolean" label="Show Flow in Modal" default="false"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
