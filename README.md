@@ -1,5 +1,10 @@
 # FlowButton Lightning Web Component
 
+<a href="https://githubsfdeploy.herokuapp.com">
+  <img alt="Deploy to Salesforce"
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
+</a>
+
 ## Overview
 
 `FlowButton` is a modern, configurable Lightning Web Component (LWC) designed to launch Salesforce Flows from a button. It supports launching flows inline or inside a modal, and can be configured to auto-launch on load.
