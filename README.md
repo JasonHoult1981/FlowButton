@@ -1,6 +1,6 @@
 # FlowButton Lightning Web Component
 
-<a href="https://githubsfdeploy.herokuapp.com">
+<a href="https://githubsfdeploy.herokuapp.com?owner=JasonHoult1981&repo=FlowButton&ref=main">
   <img alt="Deploy to Salesforce"
        src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/deploy.png">
 </a>
