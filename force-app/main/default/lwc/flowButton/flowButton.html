@@ -1,0 +1,41 @@
+<template>
+    <div class={cssClass} style={stylePadding}>
+        <lightning-layout horizontal-align={horizontalAlign}>
+            <lightning-layout-item flexibility="grow">
+                <template if:true={showButton}>
+                    <lightning-button label={buttonLabel}
+                                      variant={variant}
+                                      class={buttonClass}
+                                      onclick={handleClick}>
+                    </lightning-button>
+                </template>
+
+                <template if:true={showFlow}>
+                    <lightning-card>
+                        <lightning-flow flow-api-name={flowToLaunch}
+                                        flow-input-variables={inputVariables}
+                                        onstatuschange={handleFlowStatusChange}>
+                        </lightning-flow>
+                    </lightning-card>
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+
+    <template if:true={modalIsOpen}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close" onclick={closeModal}>X</button>
+                </div>
+                <div class="slds-modal__content slds-p-around_small">
+                    <lightning-flow flow-api-name={flowToLaunch}
+                                    flow-input-variables={inputVariables}
+                                    onstatuschange={handleFlowStatusChange}>
+                    </lightning-flow>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>
